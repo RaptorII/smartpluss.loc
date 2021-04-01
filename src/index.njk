@@ -1,0 +1,75 @@
+{% set navActiveItem = 0 %}
+{% set title = "Test page" %}
+{% extends "src/njk/layout/main.njk" %}
+
+{% block content %}
+
+{% include "src/njk/parts/institute.njk" %}
+
+<div class="content content__short long-mrg-top short-mrg-bot">
+	<h3 class="animate animate-up">
+		Popular Instractors
+	</h3>
+	<div class="slider animate animate-up">
+		<div class="docslider slider">
+			<div>
+				<div class="docslider__box">
+					<div class="docslider__img">
+						<img src="images/slider/slide-1.png" alt="">
+					</div>
+					<div class="docslider__name">
+						Simon Adward
+					</div>
+					<div class="docslider__num">
+						5,000 students
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="docslider__box">
+					<div class="docslider__img">
+						<img src="images/slider/slide-2.png" alt="">
+					</div>
+					<div class="docslider__name">
+						Elliana D`Soza
+					</div>
+					<div class="docslider__num">
+						4,350 students
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="docslider__box">
+					<div class="docslider__img">
+						<img src="images/slider/slide-3.png" alt="">
+					</div>
+					<div class="docslider__name">
+						Josef Bardon
+					</div>
+					<div class="docslider__num">
+						3,248 students
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="docslider__box">
+					<div class="docslider__img">
+						<img src="images/slider/slide-1.png" alt="">
+					</div>
+					<div class="docslider__name">
+						Simon Adward
+					</div>
+					<div class="docslider__num">
+						5,000 students
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% include "src/njk/parts/blog.njk" %}
+
+{% endblock %}
+
+

@@ -1,0 +1,140 @@
+*,
+*:before,
+*:after
+  box-sizing: inherit
+
+
+*
+  outline: 0 !important
+
+*::-moz-focus-outer,
+*::-moz-focus-inner
+  border: 0
+  padding: 0
+
+
+html
+  box-sizing: border-box
+  font-family: $font-pfd
+  font-weight: 400
+
+body
+  font-family: $font-pfd
+  font-weight: 400
+  position: relative
+  scroll-behavior: smooth
+
+.content
+  max-width: 550px
+  margin: 0 auto
+  @include clearfix()
+
+.content.content__short
+  max-width: 550px
+
+h1, h2, h3, h4, h5, h6
+  letter-spacing: 0
+  color: $color-black
+  font-weight: 400
+  font-family: $font-pfd
+  text-align: center
+
+h1, h2
+  font-size: 70px
+  line-height: 100px
+
+h3
+  font-size: 50px
+  line-height: 100px
+  color: $color-black
+  font-weight: 400
+  text-align: center
+
+h4
+  font-size: 36px
+
+h5
+  font-size: 24px
+  line-height: 19px
+  font-weight: 400
+
+p
+  font-size: 16px
+  letter-spacing: 0
+  line-height: 30px
+  color: $color-grey2
+  font-family: $font-avenir
+  text-align: center
+
+p.slogan
+  max-width: 630px
+  margin: -32px auto 0 auto
+
+.long-mrg-top
+  margin-top: 50px
+
+.long-mrg-bot
+  margin-bottom: 40px
+
+.short-mrg-top
+  margin-top: 30px
+
+.short-mrg-bot
+  margin-bottom: 25px
+
+.play
+  display: block
+  position: absolute
+  width: 58px
+  height: 58px
+  background: $color-white
+  border-radius: 50%
+  left: 10px
+  bottom: 20px
+  .triangle
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-40%, -50%)
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 6px 0 6px 9px
+    border-color: transparent transparent transparent #000000
+
+.centered-txt
+  text-align: center
+
+@media screen and (min-width: 768px)
+  .content
+    max-width: 1440px
+
+  .content.content__short
+    max-width: 1200px
+
+  .long-mrg-top
+    margin-top: 100px
+
+  .long-mrg-bot
+    margin-bottom: 80px
+
+  .short-mrg-top
+    margin-top: 50px
+
+  .short-mrg-bot
+    margin-bottom: 40px
+
+
+
+@media screen and (min-width: 990px)
+  .long-mrg-top
+    margin-top: 195px
+
+  .long-mrg-bot
+    margin-bottom: 180px
+
+  .short-mrg-top
+    margin-top: 100px
+
+  .short-mrg-bot
+    margin-bottom: 100px

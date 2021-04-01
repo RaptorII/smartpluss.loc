@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   viewBox="0 0 19.709793 36.725979"
+   height="36.725979"
+   width="19.709793"
+   id="arrow-left"
+   version="1.1">
+  
+  <defs
+     id="defs6" />
+  <path
+     id="path821"
+     d="M 18.671875,5.5867132e-4 A 1.0001,1.0001 0 0 0 17.986328,0.30524617 L 0,18.430246 17.988281,36.418527 a 1.0001,1.0001 0 1 0 1.414063,-1.414062 L 2.8222656,18.424387 19.40625,1.7134493 A 1.0001,1.0001 0 0 0 18.671875,5.5867132e-4 Z"
+      />
+</svg>

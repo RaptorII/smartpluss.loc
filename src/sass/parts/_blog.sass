@@ -1,0 +1,73 @@
+.blog
+  margin-top: auto
+  max-width: 560px
+  margin-bottom: auto
+
+  &__content
+    + .blog__content
+      margin-top: 50px
+      margin-bottom: 50px
+  h3
+    margin-bottom: 70px
+  h4
+    font-size: 38px
+    font-style: italic
+    text-align: left
+    margin: 43px 0 25px 0
+  p
+    text-align: left
+    font-size: 16px
+    letter-spacing: 0px
+    line-height: 31px
+    color: $color-grey3
+    font-family: $font-avenir
+  &__txt
+    width: 100%
+    text-align: center
+  &__img
+    overflow: hidden
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    width: 100%
+    //img
+      max-width: 100%
+  .std-button
+    margin-top: 30px
+    display: inline-block
+  .std-button.intrested
+    margin-top: -12px
+
+.blog__content:nth-child(2n+1)
+  .blog__img
+    order: 2
+  .blog__txt
+    order: 1
+    padding: 0
+    p
+      width: 90%
+
+@media screen and (min-width: 768px)
+  .blog
+    margin-top: 150px
+    max-width: 1060px
+    margin-bottom: 145px
+    &__content
+      display: flex
+      + .blog__content
+        margin-top: 190px
+        margin-bottom: 233px
+
+    &__txt
+      padding-left: 40px
+      width: 50%
+      text-align: unset
+    &__img
+      width: 50%
+
+@media screen and (min-width: 990px)
+  .blog
+    &__txt
+      padding-left: 70px
+

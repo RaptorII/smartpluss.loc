@@ -1,0 +1,129 @@
+.box
+  padding-top: 15px
+  h4, h5
+    margin: 25px 0
+    flex: 0 1 100%
+
+  &__item
+    display: flex
+    &.box__review
+      flex: 0 1 20%
+      flex-direction: column
+
+    &.box__video
+      flex: 0 1 43%
+      overflow: hidden
+
+    &.box__video--small
+      flex: 0 1 100%
+      position: relative
+      flex-wrap: wrap
+      flex-direction: column
+      .box__video--item
+        display: flex
+        justify-content: center
+        align-items: center
+        overflow: hidden
+        height: 160px
+        transition: $trans-main
+        + .box__video--item
+          margin-top: 30px
+        a
+          width: 280px
+          height: 160px
+        .play
+          left: -10px
+          bottom: -10px
+          transition: $trans-main
+        &:hover
+          .play
+            left: 10px
+            bottom: 10px
+
+  &__video
+    &--item
+      display: flex
+      justify-content: center
+      align-items: center
+      overflow: hidden
+      position: relative
+      transition: $trans-main
+      a
+        display: flex
+        justify-content: center
+        align-items: center
+        overflow: hidden
+        position: relative
+      img
+        max-width: 100%
+        transition: $trans-main
+      .play
+        transition: $trans-main
+        left: 20px
+        bottom: 33px
+      &:hover
+        .play
+          left: 30px
+          bottom: 43px
+        img
+          transform: scale(1.04)
+
+
+@media screen and (min-width: 768px)
+  .box
+    &__item
+      &.box__video--small
+        flex-direction: row
+        justify-content: center
+        .box__video--item
+          width: 280px
+          + .box__video--item
+            margin-top: 0
+            margin-left: 30px
+
+
+@media screen and (min-width: 990px)
+  .box
+    max-width: 1000px
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    h5, p
+      text-align: left
+    h4
+      text-align: center
+    &__video
+      &--item
+        img
+          max-width: 108%
+    &__item
+      &.box__review
+        flex: 0 1 50%
+      &.box__video--small
+        padding-top: 100px
+        flex: 0 1 100%
+        justify-content: center
+        .box__video--item
+          & + .box__video--item
+            margin-left: 30px
+
+@media screen and (min-width: 1440px)
+  .box
+    max-width: unset
+    h4, h5
+      flex: unset
+      text-align: left
+    &__item
+      display: flex
+      &.box__review
+        flex: 0 1 20%
+      &.box__video--small
+        flex-direction: column
+        flex: 0 1 auto
+        padding-top: unset
+        .box__video--item
+          width: 280px
+          & + .box__video--item
+            margin-left: 0
+            margin-top: 30px

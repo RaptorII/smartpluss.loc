@@ -1,0 +1,30 @@
+.nav
+  display: flex
+  align-items: baseline
+  justify-content: space-between
+
+.menu
+  .navigation
+    display: flex
+    margin: 0
+    padding: 0
+    list-style: none
+    align-items: center
+    align-content: center
+    li
+      font-size: 15px
+      letter-spacing: 0
+      color: $color-dark
+      font-family: $font-avenir
+      text-transform: uppercase
+      a
+        text-decoration: none
+        color: $color-grey
+        transition: $trans-main
+        &:hover
+          color: $color-dark
+        &.active
+          font-weight: 600
+          color: $color-dark
+      + li
+        padding-left: 72px

@@ -1,0 +1,181 @@
+$toggle-size: 56px
+$toggle-top-md: 15px
+$toggle-top-sm: 15px
+$toggle-top-xs: 15px
+$toggle-right-md: 15px
+$toggle-right-xs: 15px
+$toggle-top-mz: 15px
+
+$BGColor: $color-grey2
+$BoobleGColor: $color-white
+$SandwichColor: $color-grey
+$ShadowColor: $color-dark
+$linkColor: $color-white
+
+// Open Navigations and Animate this
+.navigation
+  &__wrapper
+    display: none
+
+.open
+  .navigation
+    display: block
+
+    &__wrapper
+      display: block
+      animation-name: show-navigation
+      animation-duration: 1.5s
+      width: 100%
+      position: fixed
+      left: 0
+      bottom: 20px
+      opacity: 1
+      visibility: visible
+      transform: translatey(0)
+      overflow-y: scroll
+      z-index: 2000
+    li
+      text-align: center
+      a, a.active
+        color: $linkColor
+      + li
+        padding: 50px 0 0 0
+
+body.open
+  overflow: hidden
+
+
+@keyframes show-navigation
+  0%
+    opacity: 0
+    visibility: hidden
+    transform: translatey(10%)
+
+  20%
+    opacity: 0
+    visibility: hidden
+
+  100%
+    opacity: 1
+    visibility: visible
+    transform: translatey(0)
+
+//Bubble
+.toggle-nav
+  transform: rotate(0deg)
+  transition: .3s ease-in-out
+  cursor: pointer
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12)
+  background-color: $BoobleGColor
+  border: none
+  border-radius: 50%
+  width: $toggle-size
+  height: $toggle-size
+  position: fixed
+  top: $toggle-top-xs
+  right: $toggle-right-xs
+  z-index: 99
+
+  span
+    display: block
+    position: absolute
+    height: 3px
+    width: 24px
+    background: $SandwichColor
+    opacity: 1
+    left: 16px
+    transform: rotate(0deg)
+    transition: .25s ease-in-out
+
+    &:nth-child(1)
+      top: 20px
+    &:nth-child(2),
+    &:nth-child(3)
+      top: 27px
+
+    &:nth-child(4)
+      top: 34px
+
+  &__bubble
+    transition: .4s ease
+    background-color: $BGColor
+    border-radius: 50%
+    width: $toggle-size
+    height: $toggle-size
+    position: fixed
+    top: $toggle-top-xs
+    right: $toggle-right-xs
+    z-index: 11
+
+    &:before
+      content: ''
+      background-color: rgba($BGColor, .3)
+      box-shadow: 0 2px 2px 0 rgba($ShadowColor, 0.14), 0 3px 1px -2px rgba($ShadowColor, 0.2), 0 1px 5px 0 rgba($ShadowColor, 0.12)
+      height: 88px
+      width: 100%
+      position: fixed
+      display: block
+      top: 0
+      left: 0
+      opacity: 0
+      visibility: hidden
+      transition: .3s
+      transition-delay: 0s
+
+.open
+  .toggle-nav
+    top: 15px
+
+    span
+      &:nth-child(1)
+        top: 18px
+        width: 0%
+        left: 50%
+
+      &:nth-child(2)
+        transform: rotate(45deg)
+
+      &:nth-child(3)
+        transform: rotate(-45deg)
+
+      &:nth-child(4)
+        top: 18px
+        width: 0%
+        left: 50%
+
+    &__bubble
+      width: 10000px
+      height: 10000px
+      top: -4000px !important
+      right: -5000px
+      background: $BGColor
+
+      &:before
+        opacity: 1
+        visibility: visible
+        transition-delay: .5s
+
+@media screen and (min-width: 990px)
+  .navigation
+    &__wrapper
+      display: block
+
+  .toggle-nav
+    display: none
+
+    &__bubble
+      display: none
+
+  .toggle-nav
+    top: $toggle-top-sm
+    right: $toggle-right-md
+
+    &__bubble
+      top: $toggle-top-sm
+      right: $toggle-right-md
+
+  .minimize
+    .toggle-nav
+      top: $toggle-top-mz
+      &__bubble
+        top: $toggle-top-mz
