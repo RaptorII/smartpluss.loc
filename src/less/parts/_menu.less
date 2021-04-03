@@ -1,0 +1,43 @@
+
+
+.menu {
+  display: flex;
+
+  .navigation {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    li {
+      padding: 10px;
+      & + li {
+        padding-left: 30px;
+      }
+      a {
+        font-size: 18px;
+        color: @color-white;
+        font-weight: 400;
+        font-family: @font-karla;
+        transition: @trans-main;
+        padding: 5px 10px;
+        &:hover {
+          padding: 5px 10px;
+          background: #2d2d35;
+          transition: @trans-main;
+        }
+        &.active {
+          padding: 5px 10px;
+          background: #2d2d35;
+          transition: @trans-main;
+        }
+      }
+
+    }
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .menu {
+    margin-left: 75px;
+  }
+}
