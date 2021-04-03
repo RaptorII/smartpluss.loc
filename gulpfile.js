@@ -2,8 +2,6 @@ var gulp = require('gulp'),
 	//nunjucks
     njkRender = require('gulp-nunjucks-render'),
     prettify = require('gulp-html-prettify'),
-	//sass + svg
-	sass       = require('gulp-sass'),
 	less       = require('gulp-less'),
 	sourcemaps = require('gulp-sourcemaps'),
 	concat     = require('gulp-concat'),
@@ -58,15 +56,6 @@ gulp.task('copyimages', function() {
 
 } );
 
-//sass
-// let
-// 	config = {
-// 		srcDir: './src/sass',
-// 		destDir: './build',
-// 		stylePattern: '/**/*.+(sass|scss|css)'
-// 	},
-// 	app = {};
-
 let
 	config = {
 		srcDir: './src/less',
@@ -79,7 +68,6 @@ app.addStyle = function(paths, outputFilename) {
 	return Promise.all([
 		gulp.src(paths)
 			.pipe(sourcemaps.init())
-//			.pipe(sass().on('error', sass.logError))
 			.pipe(less())
 			.pipe(debug({title: 'sass:'}))
 			.pipe(prefixer())
@@ -98,11 +86,6 @@ app.addStyle = function(paths, outputFilename) {
 
 gulp.task('styles', function() {
 	return Promise.all([
-		//sass
-		// app.addStyle([
-		// 	config.srcDir+'/main.sass',
-		// ], 'css/style.css'),
-
 		//less
 		app.addStyle([
 			config.srcDir+'/main.less',
@@ -147,17 +130,6 @@ gulp.task('svgSpriteBuild', function () {
 		}))
 		.pipe(gulp.dest('./build/svg'));
 });
-
-//sass
-// gulp.task('watch', function () {
-// 	gulp.watch([
-// 			config.srcDir + '/**/*.scss',
-// 			config.srcDir + '/**/*.sass',
-// 			config.srcDir + '/**/*.css',
-// 		],
-// 		gulp.parallel('styles')
-// 	)
-// });
 
 //less
 gulp.task('watch', function () {

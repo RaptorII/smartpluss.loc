@@ -1,7 +1,7 @@
 .main-txt {
   &__head {
     max-width: 750px;
-    font-size: 72px;
+    font-size: 36px;
     color: @color-white;
     font-weight: 700;
     font-family: @font-play;
@@ -10,7 +10,7 @@
     line-height: 85px;
   }
   &__sub {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 30px;
     color: @color-white;
     font-weight: 400;
@@ -26,6 +26,17 @@
       width: 24px;
       height: 34px;
       margin: 20px auto;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-txt {
+    &__head {
+      font-size: 72px;
+    }
+    &__sub {
+      font-size: 18px;
     }
   }
 }

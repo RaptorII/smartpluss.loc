@@ -1,14 +1,18 @@
 .header {
-  background: url("../images/main.jpg") 0 0 no-repeat;
-  height: 750px;
+  background: url(../images/main.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  padding-bottom: 20px;
 }
 
 .nav {
   margin: 0 auto;
   padding-top: 25px;
-  width: 1130px;
+  max-width: 1130px;
   display: flex;
   justify-content: space-between;
+}
+.logo {
+  margin-left: 10px;
 }
 
 .logo-ico {
@@ -16,4 +20,39 @@
   height: 36px;
 }
 
+.order {
+  display: none;
+}
+.open {
+  .order {
+    display: block;
+    position: fixed;
+    z-index: 2001;
+    transform: translate(-50%);
+    left: 50%;
+    top: 100px;
+    .order__btn {
+      padding: 9px 36px;
+    }
+  }
+  .logo {
+    display: block;
+    position: fixed;
+    z-index: 12;
+  }
+}
+@media screen and (min-width: 768px) {
+  .order {
+    display: flex;
+  }
 
+}
+
+@media screen and (min-width: 1130px) {
+  .header {
+    padding-bottom: 35px;
+  }
+  .logo {
+    margin-left: 0;
+  }
+}

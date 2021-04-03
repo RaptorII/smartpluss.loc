@@ -17,9 +17,6 @@ window.onload = function () {
         loader.innerHTML='<div class="progress">' + '<strong> ' + progress + '% </strong></div>';
 
         let img = new Image();
-        /*img.onload = function() {
-            console.log('load' + imagesCount[i].src );
-        };*/
         img.src = imagesCount[i].src;
         img.onload;
 
@@ -32,7 +29,7 @@ window.onload = function () {
     window.setTimeout(function () {
         document.getElementById('loader').classList.remove('loaded_hiding');
         document.getElementById('loader').classList.add('loaded');
-    }, 1000);
+    }, 2000);
 
 };
 

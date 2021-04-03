@@ -1,8 +1,59 @@
 .main-form {
   max-width: 1130px;
   border-radius: 5px;
-  background-color: rgba(@colo-black,0.63);
+  background-color: rgba(@color-black, 1);
+  margin: 20px;
+  padding-bottom: 43px ;
+  &__input,
+  .select {
+    width: 100%;
+    border-radius: 5px;
+    margin: 8px 0;
+  }
+  &__input {
+    background: rgba(@color-white, 0.3);
+    color: rgba(@color-white, 1);
+    font-size: 18px;
+    padding-left: 10px;
+    border: none;
+    height: 46px;
+  }
   &__head {
+    padding: 25px 0 20px 0;
+    font-size: 24px;
+    color: @color-white;
+    font-weight: 400;
+    font-family: @font-play;
+    text-align: center;
+  }
+  &__data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 43px 30px 43px;
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
+@media screen and (min-width: 768px) {
+  .main-form {
+    max-width: 1130px;
+    border-radius: 5px;
+    background-color: rgba(@color-black,0.63);
+    margin: 0 auto;
+    padding-bottom: 43px ;
+    &__input {
+      width: calc(30% - 10px);
+    }
+    .select {
+      width: 30%;
+    }
+    &__data {
+      flex-wrap: nowrap;
+    }
   }
 }

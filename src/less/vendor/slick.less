@@ -63,7 +63,6 @@
 }
 .slick-slide {
     float: left;
-    height: 100%;
     min-height: 1px;
     [dir="rtl"] & {
         float: right;
@@ -96,6 +95,27 @@
         border: 1px solid transparent;
     }
 }
+.slick-slide:active, .slick-slide:focus {
+    outline: none;
+}
+
 .slick-arrow.slick-hidden {
     display: none;
+}
+
+.slick-track {
+    display: flex;
+    padding-bottom: 30px;
+}
+
+.slick-slide.slick-slide {
+    display: flex;
+    margin: 10px;
+}
+
+@media screen and (min-width: 560px) {
+    .slick-slide.slick-slide {
+        display: flex;
+        margin: 0 50px;
+    }
 }

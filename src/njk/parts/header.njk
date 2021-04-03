@@ -8,7 +8,7 @@
 		</div>
 		<div class="menu">
 			<div class="toggle-nav__bubble">
-				<div class="toggle-nav">
+				<div class="toggle-nav" id="toggle-nav">
 					<span></span>
 					<span></span>
 					<span></span>
@@ -55,24 +55,31 @@
 			Place your order
 		</div>
 		<form action="">
-			<input type="text" name="name">
-			<div class="select">
-				<select name="slct" >
-					<option selected disabled>Choose an option</option>
-					<option value="1">Pure CSS</option>
-					<option value="2">No JS</option>
-					<option value="3">Nice!</option>
-				</select>
-			</div>
-			<div class="select">
-				<select name="num" id="slct">
-					<option selected disabled>Choose an option</option>
-					<option value="275">275</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-				</select>
+			<div class="main-form__data">
+				<input type="text" name="name" class="main-form__input" placeholder="Topic" value="Topic">
+				<div class="select">
+					<select name="slct" >
+						<option selected disabled>Essay</option>
+						<option value="1">Essay</option>
+						<option value="2">Essay 2</option>
+						<option value="3">Essay 3</option>
+					</select>
+				</div>
+				<div class="select">
+					<select name="num" >
+						<option selected disabled>275</option>
+						<option value="275">275</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+					</select>
+				</div>
 			</div>
 
+			<div class="main-form__button">
+				<button class="order__btn orange-btn">
+					Order Now
+				</button>
+			</div>
 
 		</form>
 	</div>

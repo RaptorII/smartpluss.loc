@@ -18,8 +18,19 @@
 }
 
 .transparent-btn {
-  border: 1px solid transparent;
+  border: 1px solid @color-orange;
+  color: @color-orange;
   background-color: transparent;
   border-radius: 5px;
   padding: 9px 56px;
+  font-size: 19px;
+  transition: @trans-main;
+  &:hover {
+    cursor: pointer;
+    border: 1px solid @color-orange;
+    background-color: @color-orange;
+    color: @color-white;
+    border-radius: 5px;
+    transition: @trans-main;
+  }
 }

@@ -7,3 +7,28 @@ body {
 a {
   text-decoration: none;
 }
+
+#loader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(@color-black, 0.7);
+  .progress {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: @color-white;
+  }
+  &.loaded_hiding {
+    transition: 0.3s opacity;
+    opacity: 0;
+  }
+  &.loaded {
+    display: none
+  }
+}
+

@@ -1,27 +1,28 @@
-
-$('.docslider').slick({
+// console.log('kuku');
+$('.slick__slider').slick({
 	slidesToScroll: 1,
 	autoplay: false,
-	dots: true,
+	dots: false,
 	infinite: true,
 	autoplaySpeed: 3000,
-	slidesToShow: 3,
-	// centerMode: true,
+	slidesToShow: 1,
+	centerMode: true,
+	centerPadding: '28%',
 	responsive: [
 		{
-			breakpoint: 990,
+			breakpoint: 1130,
 			settings: {
 				arrows: true,
 				// centerMode: true,
-				centerPadding: '0px',
-				slidesToShow: 2
+				centerPadding: '10%',
+				slidesToShow: 1
 			}
 		},
 		{
 			breakpoint: 768,
 			settings: {
-				arrows: false,
-				// centerMode: true,
+				arrows: true,
+				centerMode: true,
 				centerPadding: '10px',
 				slidesToShow: 1
 			}
